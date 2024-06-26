@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>email__c</fullName>
+    <caseSensitive>true</caseSensitive>
+    <description>student mail</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Enter mail-id</inlineHelpText>
+    <label>email</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Email</type>
+    <unique>true</unique>
+</CustomField>
