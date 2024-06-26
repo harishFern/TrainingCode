@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>check_man_of_matches</fullName>
+    <active>true</active>
+    <errorConditionFormula>Number_of_matches__c  &lt;  Man_of_the_matches__c</errorConditionFormula>
+    <errorDisplayField>Man_of_the_matches__c</errorDisplayField>
+    <errorMessage>Man of the matches should be less than the no of matches...</errorMessage>
+</ValidationRule>

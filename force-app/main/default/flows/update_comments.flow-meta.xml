@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>61.0</apiVersion>
+    <environments>Default</environments>
+    <interviewLabel>update comments {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>update comments</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>FREE_FORM_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordUpdates>
+        <name>update_comment</name>
+        <label>update comment</label>
+        <locationX>539</locationX>
+        <locationY>225</locationY>
+        <inputAssignments>
+            <field>Comments__c</field>
+            <value>
+                <elementReference>modify_comments</elementReference>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <start>
+        <locationX>41</locationX>
+        <locationY>41</locationY>
+        <connector>
+            <targetReference>update_comment</targetReference>
+        </connector>
+        <object>Application__c</object>
+        <recordTriggerType>Update</recordTriggerType>
+        <triggerType>RecordAfterSave</triggerType>
+    </start>
+    <status>Obsolete</status>
+    <textTemplates>
+        <name>modify_comments</name>
+        <isViewedAsPlainText>true</isViewedAsPlainText>
+        <text>Application Rejected by {!$User.FirstName} at {!$Flow.CurrentDateTime}</text>
+    </textTemplates>
+</Flow>
